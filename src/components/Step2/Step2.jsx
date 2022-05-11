@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import { photo1 } from "../../assets/img/img";
 import { useForm } from "react-hook-form";
@@ -12,8 +13,10 @@ const Step2 = props => {
         defaultValues: state.yourDetails
     });
 
+    const navigate = useNavigate();
     const Step3 = data => {
         action(data);
+        navigate("../s3");
     };
 
     return (
