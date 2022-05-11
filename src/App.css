@@ -46,13 +46,15 @@ input.form-control:focus {
   text-align: left;
 }
 
-.label-form {
+.label-form,
+.label-patient,
+.label-service {
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 0rem !important;
 }
 
-.sublabel-form {
+.sublabel-form, .label-service {
   font-size: 1.3rem;
   padding-bottom: 1.5rem;
   margin-top: 0px;
