@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Sede 1",
+        "location": "Av. 5 Calle 4 # 2-1 Medellin",
+        "schedule": "8:00 am - 5:00 pm"
+    },
+    {
+        "name": "Sede 2",
+        "location": "Av. 5 Calle 4 # 2-1 Bogota",
+        "schedule": "8:00 am - 5:00 pm"
+    },
+    {
+        "name": "Sede 3",
+        "location": "Av. 5 Calle 4 # 2-1 Cali",
+        "schedule": "8:00 am - 5:00 pm"
+    },
+    {
+        "name": "Sede 4",
+        "location": "Av. 5 Calle 4 # 2-1 Cucuta",
+        "schedule": "8:00 am - 5:00 pm"
+    },
+    {
+        "name": "Sede 5",
+        "location": "Av. 5 Calle 4 # 2-1 Bucaramanga",
+        "schedule": "8:00 am - 5:00 pm"
+    }
+]
