@@ -1,6 +1,7 @@
 .cstm-input,
 .cstm-select {
   border: none;
+  color: #7D7D7D;
   border-bottom: 1px solid #474747;
   border-radius: 0px;
   -webkit-border-radius: 0px;

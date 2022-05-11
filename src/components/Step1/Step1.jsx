@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from '../Navbar/Navbar.jsx';
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
@@ -12,8 +13,10 @@ const Step1 = props => {
         mode: "onChange"
     });
 
+    const navigate = useNavigate();
     const Step2 = data => {
         action(data);
+        navigate("../s2");
     };
 
     return (
@@ -21,7 +24,7 @@ const Step1 = props => {
             <Navbar NavStyle="2" />
             <div className="cstm-container">
                 <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 section-left">
+                    <div className="col-xs-12 col-sm-12 col-md-4 col-lg- section-left">
                         <form onSubmit={handleSubmit(Step2)}>
                             <p className="label-form">Selecciona la oficina mas cercana</p>
                             <input type="search" className='search' />
