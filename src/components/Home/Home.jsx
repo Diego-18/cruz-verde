@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from '../Navbar/Navbar.jsx';
 
 import { photo2 } from "../../assets/img/img";
 import './Home.css'
 
 export default () => {
+    const navigate = useNavigate();
+    const Step1 = data => {
+        navigate("../s1");
+    };
     return (
         <section className="step-0">
             <Navbar NavStyle="1" />
@@ -21,7 +26,7 @@ export default () => {
                             <li className='item-list'>Selecciona el servicio.</li>
                             <li className='item-list'>Verifica tu informacion.</li>
                         </ol>
-                        <button onClick="" type='submit' className="btn cstm-btn">Solicitar Turno</button>
+                        <button onClick={Step1} type='submit' className="btn cstm-btn">Solicitar Turno</button>
 
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 section-right">
