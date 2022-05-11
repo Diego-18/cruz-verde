@@ -4,6 +4,7 @@ import { DevTool } from "little-state-machine-devtools";
 import './App.css'
 
 import Home from './components/Home/Home.jsx';
+import Step1 from './components/Step1/Step1.jsx';
 
 function App() {
     createStore({
@@ -26,6 +27,7 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
+                        <Route exact path="/s1" element={<Step1 />} />
                     </Routes>
                 </BrowserRouter>
             </StateMachineProvider>
