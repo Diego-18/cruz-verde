@@ -27,16 +27,13 @@ input.form-control:focus {
   background-color: #3F3F41;
   border-radius: 1.9rem;
   color: #fff;
+  width: 17rem;
+  height: 2.5rem;
+  margin: 2rem;
   -webkit-border-radius: 1.9rem;
   -moz-border-radius: 1.9rem;
   -ms-border-radius: 1.9rem;
   -o-border-radius: 1.9rem;
-}
-
-.cstm-btn {
-  width: 17rem;
-  height: 2.5rem;
-  margin: 2rem;
 }
 
 .label-form,
@@ -54,7 +51,8 @@ input.form-control:focus {
   margin-bottom: 0rem !important;
 }
 
-.sublabel-form, .label-service {
+.sublabel-form,
+.label-service {
   font-size: 1.3rem;
   padding-bottom: 1.5rem;
   margin-top: 0px;
