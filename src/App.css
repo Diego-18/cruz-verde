@@ -1,42 +1,58 @@
-.App {
-  text-align: center;
+.cstm-input,
+.cstm-select {
+  border: none;
+  border-bottom: 1px solid #474747;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus,
+select:focus,
+select,
+input.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  border-bottom: #3F3F41 2px solid;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.cstm-btn {
+  background-color: #3F3F41;
+  border-radius: 1.9rem;
+  color: #fff;
+  -webkit-border-radius: 1.9rem;
+  -moz-border-radius: 1.9rem;
+  -ms-border-radius: 1.9rem;
+  -o-border-radius: 1.9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cstm-btn {
+  width: 17rem;
+  height: 2.5rem;
+  margin: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.label-form,
+.sublabel-form {
+  color: var(--color-primary);
+  font-family: var(--font-family-1);
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label-form {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0rem !important;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.sublabel-form {
+  font-size: 1.3rem;
+  padding-bottom: 1.5rem;
+  margin-top: 0px;
 }

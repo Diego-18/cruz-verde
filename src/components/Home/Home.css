@@ -1,0 +1,51 @@
+.step-0 .section-right .photo {
+    width: 47rem;
+    height: 33.5rem;
+    padding-top: 5rem;
+}
+
+.cstm-container .row {
+    margin-right: 0 !important;
+}
+
+.step-0 .cstm-container .section-left {
+    padding-top: 10rem;
+    padding-left: 8rem;
+}
+
+.step-0 .subtitle-process {
+    font-weight: bold;
+    margin: 1.5rem 0rem;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #2D2D2D;
+}
+
+.step-0 .item-list {
+    text-align: left;
+    color: #3F3F41;
+    padding: .5rem;
+}
+
+.step-0 .cstm-container li {
+    list-style-type: none;
+    counter-increment: list;
+    position: relative;
+}
+
+.step-0 .cstm-container ol li::before {
+    color: #fff;
+    background: #1F9547;
+    content: counter(list);
+    left: -2.5rem;
+    position: absolute;
+    text-align: right;
+    width: 26px;
+    text-align: center;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
