@@ -5,6 +5,7 @@ import './App.css'
 
 import Home from './components/Home/Home.jsx';
 import Step1 from './components/Step1/Step1.jsx';
+import Step2 from './components/Step2/Step2.jsx';
 
 function App() {
     createStore({
@@ -28,6 +29,7 @@ function App() {
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/s1" element={<Step1 />} />
+                        <Route exact path="/s2" element={<Step2 />} />
                     </Routes>
                 </BrowserRouter>
             </StateMachineProvider>
