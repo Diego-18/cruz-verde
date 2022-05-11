@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import { photo2 } from "../../assets/img/img";
 import { useForm } from "react-hook-form";
@@ -5,15 +7,23 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../../updateAction.jsx";
 import infoSede from "../../assets/data/info.json";
 import './Step3.css'
+import { logo } from '../../assets/img/img.jsx';
+import Modal from "react-modal";
 
-const Step2 = props => {
+
+const Step3 = props => {
     const { state, action } = useStateMachine(updateAction);
-    const { handleSubmit, register } = useForm({
-        defaultValues: state.yourDetails
-    });
 
-    const Step3 = data => {
-        action(data);
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    function toggleModal() {
+        setIsOpen(!isOpen);
+    }
+
+    const navigate = useNavigate();
+    const newTurn = data => {
+        navigate("/");
     };
 
     return (
@@ -48,14 +58,41 @@ const Step2 = props => {
                                     </div>
                                 ))
                             }
+                            <button onClick={toggleModal} className="btn cstm-btn">Aceptar</button>
                         </div>
-                        <button className="btn cstm-btn">Aceptar</button>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <div className="section-right">
                             <img src={photo2} alt="photo" className="photo" />
                         </div>
                     </div>
+
+                    <Modal
+                        isOpen={isOpen}
+                        onRequestClose={toggleModal}
+                        className="infoModal"
+                        overlayClassName="Overlay"
+                        closeTimeoutMS={500}
+                    >
+                        <div>
+                            <div className="modal-header">
+                                <img src={logo} alt="logo" className="logo-modal" />
+                            </div>
+
+                            <div className="modal-body">
+                                <p className="label-form">Haz solicitado tu turno con exito.</p>
+                                <p className="label-title">Servicio:</p>
+                                <p className="label-text">Consulta Externa</p>
+                                <p className="label-title">Dia:</p>
+                                <p className="label-text">10-05-2021</p>
+                                <p className="label-title">Hora:</p>
+                                <p className="label-text">10:00 am</p>
+                            </div>
+                            <div className="modal-footer">
+                                <button onClick={newTurn} className="btn cstm-btn-2">Solicitar nuevo turno</button>
+                            </div>
+                        </div>
+                    </Modal>
                 </div>
             </div>
         </div>
@@ -63,4 +100,4 @@ const Step2 = props => {
     );
 }
 
-export default Step2;
+export default Step3;
