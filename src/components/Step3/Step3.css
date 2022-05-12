@@ -112,7 +112,7 @@
 
 }
 
-.modal-footer .cstm-btn-2 {
+.cstm-btn-2 {
     width: 80%;
     margin: 0 auto;
     border: var(--color-primary) solid 2px;
@@ -124,6 +124,16 @@
     font-size: 17px;
     text-align: center;
     color: var(--color-primary);
+}
+
+.section-exporter {
+    width: 100%;
+    text-align: center;
+}
+
+.section-exporter .cstm-btn-2 {
+    background-color: var(--color-primary);
+    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
