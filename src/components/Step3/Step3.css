@@ -125,3 +125,20 @@
     text-align: center;
     color: var(--color-primary);
 }
+
+@media screen and (max-width: 992px) {
+    .step-3 .cstm-container .section-left {
+        padding: 5rem 6rem 0rem;
+        margin: 0 auto;
+    }
+
+    .step-3 .section-right .photo {
+        width: 30rem;
+        height: 25rem;
+    }
+
+    .modal-body .label-form {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+}

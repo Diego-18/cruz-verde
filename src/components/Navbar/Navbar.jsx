@@ -18,7 +18,7 @@ export default function Navbar(props) {
                     <div className="container-logo">
                         <img className="logo" src={logo} alt="Cruz verde Logo" />
                     </div >
-                    <div className="navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
                         <div className="section-back">
                             <a href="/" className='label-back'>
                                 <img src={back} alt="back" className="back" />

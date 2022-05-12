@@ -14,9 +14,15 @@ const Step2 = props => {
     });
 
     const navigate = useNavigate();
+
+    const Back = data => {
+        action();
+        navigate("/s1");
+    };
+
     const Step3 = data => {
         action(data);
-        navigate("../s3");
+        navigate("/s3");
     };
 
     return (
@@ -101,6 +107,8 @@ const Step2 = props => {
                             </div>
 
                             <button type="submit" className="btn cstm-btn">Siguiente</button>
+
+                            <button onClick={Back} className="btn cstm-btn d-md-none d-lg-none d-xl-none">Atras</button>
                         </form>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">

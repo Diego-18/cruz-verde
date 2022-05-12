@@ -47,3 +47,15 @@
 .step-2 .sede-horario {
     margin-bottom: 0 !important;
 }
+
+@media screen and (max-width: 992px) {
+    .step-2 .cstm-container .section-left {
+        padding: 5rem 6rem 0rem;
+        margin: 0 auto;
+    }
+
+    .step-2 .section-right .photo {
+        width: 30rem;
+        height: 25rem;
+    }
+}

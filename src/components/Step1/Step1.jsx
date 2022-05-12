@@ -14,11 +14,16 @@ const Step1 = props => {
         mode: "onChange"
     });
 
-
     const navigate = useNavigate();
+
+    const Back = data => {
+        action();
+        navigate("/");
+    };
+
     const Step2 = data => {
         action(data);
-        navigate("../s2");
+        navigate("/s2");
     };
 
     return (
@@ -43,7 +48,10 @@ const Step1 = props => {
                                 </div>
                             ))}
                             {errors.sede && <span className="error-message">Este campo es requerido.</span>}
+
                             <button type='submit' className="btn cstm-btn">Seleccionar</button>
+
+                            <button onClick={Back} className="btn cstm-btn d-md-none d-lg-none d-xl-none">Atras</button>
                         </form>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
