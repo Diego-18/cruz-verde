@@ -49,3 +49,12 @@
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
 }
+
+
+@media screen and (max-width: 992px) {
+    .step-0 .section-right .photo {
+        width: 30rem;
+        height: 30rem;
+        margin: 2rem;
+    }
+}
