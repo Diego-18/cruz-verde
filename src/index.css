@@ -3,13 +3,14 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  height: 100vh;
+  box-sizing: border-box;
 }
 
 :root {
   --font-family-1: 'Lato';
   --color-primary: #1F9547;
+}
+
+body {
+  min-height: 100vh;
 }
