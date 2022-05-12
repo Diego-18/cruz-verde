@@ -4,16 +4,21 @@ import Navbar from '../../components/Navbar/Navbar.jsx';
 import { photo2 } from "../../assets/img/img";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
-import updateAction from "../../updateAction.jsx";
 import infoSede from "../../assets/data/info.json";
 import './Step3.css'
 import { logo } from '../../assets/img/img.jsx';
 import Modal from "react-modal";
+import clearAction from "../../clearAction.jsx";
 
 
 const Step3 = props => {
-    const { state, action } = useStateMachine(updateAction);
-
+    const { register, handleSubmit } = useForm();
+    const { state, action } = useStateMachine(clearAction);
+    const onSubmit = (data) => {
+        action(data);
+        action();
+        navigate('/');
+    };
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -75,22 +80,26 @@ const Step3 = props => {
                         closeTimeoutMS={500}
                     >
                         <div>
-                            <div className="modal-header">
-                                <img src={logo} alt="logo" className="logo-modal" />
-                            </div>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <div className="modal-header">
+                                    <img src={logo} alt="logo" className="logo-modal" />
+                                </div>
 
-                            <div className="modal-body">
-                                <p className="label-form">Haz solicitado tu turno con exito.</p>
-                                <p className="label-title">Servicio:</p>
-                                <p className="label-text">Consulta Externa</p>
-                                <p className="label-title">Dia:</p>
-                                <p className="label-text">10-05-2021</p>
-                                <p className="label-title">Hora:</p>
-                                <p className="label-text">10:00 am</p>
-                            </div>
-                            <div className="modal-footer">
-                                <button onClick={newTurn} className="btn cstm-btn-2">Solicitar nuevo turno</button>
-                            </div>
+                                <div className="modal-body">
+                                    <p className="label-form">Haz solicitado tu turno con exito.</p>
+                                    <p className="label-title">Servicio:</p>
+                                    <p className="label-text">Consulta Externa</p>
+                                    <p className="label-title">Dia:</p>
+                                    <p className="label-text">10-05-2021</p>
+                                    <p className="label-title">Hora:</p>
+                                    <p className="label-text">10:00 am</p>
+                                </div>
+                                <div className="modal-footer">
+
+                                    <button type="submit" className="btn cstm-btn-2">Solicitar nuevo turno</button>
+
+                                </div>
+                            </form>
                         </div>
                     </Modal>
                 </div>
