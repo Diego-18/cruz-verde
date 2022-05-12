@@ -9,11 +9,15 @@ import './Step3.css'
 import { logo } from '../../assets/img/img.jsx';
 import Modal from "react-modal";
 import clearAction from "../../clearAction.jsx";
+import GeneratePDF from "../GeneratePDF/GeneratePDF.jsx";
 
 
 const Step3 = props => {
     const { register, handleSubmit } = useForm();
     const { state, action } = useStateMachine(clearAction);
+
+    const Day = "10-05-2021";
+    const Time = "10:00 am";
 
     const navigate = useNavigate();
     const onSubmit = (data) => {
@@ -65,6 +69,7 @@ const Step3 = props => {
                                     </div>
                                 ))
                             }
+
                             <button onClick={toggleModal} className="btn cstm-btn">Aceptar</button>
 
                             <button onClick={Back} className="btn cstm-btn d-md-none d-lg-none d-xl-none">Atras</button>
@@ -94,14 +99,15 @@ const Step3 = props => {
                                     <p className="label-title">Servicio:</p>
                                     <p className="label-text">Consulta Externa</p>
                                     <p className="label-title">Dia:</p>
-                                    <p className="label-text">10-05-2021</p>
+                                    <p className="label-text">{Day}</p>
                                     <p className="label-title">Hora:</p>
-                                    <p className="label-text">10:00 am</p>
+                                    <p className="label-text">{Time}</p>
                                 </div>
                                 <div className="modal-footer">
                                     <button type="submit" className="btn cstm-btn-2">Solicitar nuevo turno</button>
                                 </div>
                             </form>
+                            <GeneratePDF Day={Day} Time={Time} />
                         </div>
                     </Modal>
                 </div>
