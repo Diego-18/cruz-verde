@@ -1,17 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from '../Navbar/Navbar.jsx';
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
+import Navbar from '../Navbar/Navbar.jsx';
 import updateAction from "../../updateAction.jsx";
 import infoSede from "../../assets/data/info.json";
 import './Step1.css';
 
 const Step1 = props => {
     const { state, action } = useStateMachine(updateAction);
-    const { handleSubmit, register } = useForm({
+    const { handleSubmit, register, formState: { errors }
+    } = useForm({
         defaultValues: state.yourDetails,
         mode: "onChange"
     });
+
 
     const navigate = useNavigate();
     const Step2 = data => {
@@ -27,11 +29,10 @@ const Step1 = props => {
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg- section-left">
                         <form onSubmit={handleSubmit(Step2)}>
                             <p className="label-form">Selecciona la oficina mas cercana</p>
-                            <input type="search" className='search' />
                             {infoSede.map((item, index) => (
                                 <div key={index}>
                                     <div className="form-check">
-                                        <input className="form-check-input" type="radio" {...register('sede', { required: true })} value={item.name} />
+                                        <input className="form-check-input" type="radio" {...register('sede', { required: "Debes seleccionar una oficina, no puede quedar vacio." })} value={item.name} />
                                         <label className="form-check-label">
                                             {item.name}
                                         </label>
@@ -41,6 +42,7 @@ const Step1 = props => {
                                     <hr />
                                 </div>
                             ))}
+                            {errors.sede && <span className="error-message">Este campo es requerido.</span>}
                             <button type='submit' className="btn cstm-btn">Seleccionar</button>
                         </form>
                     </div>

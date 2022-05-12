@@ -9,7 +9,7 @@ import './Step2.css'
 
 const Step2 = props => {
     const { state, action } = useStateMachine(updateAction);
-    const { handleSubmit, register } = useForm({
+    const { handleSubmit, register, formState: { errors } } = useForm({
         defaultValues: state.yourDetails
     });
 
@@ -31,16 +31,18 @@ const Step2 = props => {
                                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3 mt-4">
                                     <select className="cstm-select form-control"
                                         {...register('documentType', { required: true })}>
-                                        <option value="">Cedula de Ciudadania</option>
-                                        <option value="CE">CE</option>
-                                        <option value="CC">CC</option>
+                                        <option value="">Tipo de Documento</option>
+                                        <option value="CE">Cedula de Extranjeria</option>
+                                        <option value="CC">Cedula de Ciudadania</option>
                                     </select>
+                                    {errors.documentType && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-4">
                                     <input type="text" className="cstm-input form-control" placeholder="Numero de Documento"
                                         {...register('nDocument', { required: true })} />
+                                    {errors.nDocument && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
                             </div>
 
@@ -49,12 +51,14 @@ const Step2 = props => {
                                     <input type="text" className="cstm-input form-control" placeholder="Primer Nombre"
                                         {...register('firstName', { required: true })}
                                     />
+                                    {errors.firstName && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
 
                                 <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
                                     <input type="text" className="cstm-input form-control" placeholder="Segundo Nombre"
-                                        {...register('secondName', { required: true })}
+                                        {...register('secondName', { required: "El segundo nombre es un campo requerido." })}
                                     />
+                                    {errors.secondName && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
                             </div>
 
@@ -63,12 +67,14 @@ const Step2 = props => {
                                     <input type="text" className="cstm-input form-control" placeholder="Primer Apellido"
                                         {...register('firstLastName', { required: true })}
                                     />
+                                    {errors.firstLastName && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
 
                                 <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
                                     <input type="text" className="cstm-input form-control" placeholder="Segundo Apellido"
                                         {...register('secondLastName', { required: true })}
                                     />
+                                    {errors.secondLastName && <span className="error-message">Este campo es requerido.</span>}
                                 </div>
                             </div>
 
