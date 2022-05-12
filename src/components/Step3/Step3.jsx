@@ -14,6 +14,8 @@ import clearAction from "../../clearAction.jsx";
 const Step3 = props => {
     const { register, handleSubmit } = useForm();
     const { state, action } = useStateMachine(clearAction);
+
+    const navigate = useNavigate();
     const onSubmit = (data) => {
         action(data);
         action();
@@ -26,9 +28,9 @@ const Step3 = props => {
         setIsOpen(!isOpen);
     }
 
-    const navigate = useNavigate();
-    const newTurn = data => {
-        navigate("/");
+    const Back = data => {
+        action();
+        navigate("/s2");
     };
 
     return (
@@ -64,6 +66,8 @@ const Step3 = props => {
                                 ))
                             }
                             <button onClick={toggleModal} className="btn cstm-btn">Aceptar</button>
+
+                            <button onClick={Back} className="btn cstm-btn d-md-none d-lg-none d-xl-none">Atras</button>
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7">
@@ -95,9 +99,7 @@ const Step3 = props => {
                                     <p className="label-text">10:00 am</p>
                                 </div>
                                 <div className="modal-footer">
-
                                     <button type="submit" className="btn cstm-btn-2">Solicitar nuevo turno</button>
-
                                 </div>
                             </form>
                         </div>
