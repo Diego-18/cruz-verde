@@ -2,6 +2,10 @@
 
 It is an interface with the purpose of allowing users to book medical consultations in different areas of the country with just one step.
 
+### Purpose
+
+The purpose of this interface is to make it much easier for you to request medical consultations.
+
 ### Install
 
 1 - The repository is downloaded.
