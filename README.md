@@ -34,7 +34,7 @@ And use the files in the dist folder.
 
 ## DEMO
 
-
+Visit the site here https://cruz-verde-dc.netlify.app
 
 ## Technologies used
 
