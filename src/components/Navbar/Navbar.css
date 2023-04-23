@@ -29,10 +29,6 @@
     padding: 0 .5rem;
 }
 
-.section-steps {
-    margin: 0rem auto;
-}
-
 .section-steps .nav-item {
     width: 2.5rem;
     border-radius: 10rem;
@@ -45,6 +41,7 @@
 }
 
 .section-steps {
+    margin: 0rem auto;
     position: absolute;
     left: 56%;
     right: 0;
