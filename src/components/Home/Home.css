@@ -40,7 +40,6 @@
     content: counter(list);
     left: -2.5rem;
     position: absolute;
-    text-align: right;
     width: 26px;
     text-align: center;
     border-radius: 2rem;
