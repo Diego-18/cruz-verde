@@ -1,61 +1,61 @@
 .step-2 .section-right .photo {
-    width: 40rem;
-    height: 30rem;
-    padding: 3rem;
+	width: 40rem;
+	height: 30rem;
+	padding: 3rem;
 }
 
 .step-2 .cstm-container .section-right {
-    padding-top: 3rem;
-    padding-left: 3rem;
+	padding-top: 3rem;
+	padding-left: 3rem;
 }
 
 .step-2 .cstm-container .section-left {
-    padding-top: 3rem;
-    padding-left: 7rem;
+	padding-top: 3rem;
+	padding-left: 7rem;
 }
 
 .step-2 .label-form {
-    margin: 1rem 0rem;
+	margin: 1rem 0rem;
 }
 
 .step-2 input,
 .step-2 select {
-    letter-spacing: 0.64px;
+	letter-spacing: 0.64px;
 }
 
 .step-2 .sede-title {
-    font-family: var(--font-family-1);
-    font-weight: bold;
-    color: #3F3F41;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 21px;
-    letter-spacing: 0.68px;
+	font-family: var(--font-family-1);
+	font-weight: bold;
+	color: #3f3f41;
+	font-size: 1rem;
+	text-align: left;
+	line-height: 21px;
+	letter-spacing: 0.68px;
 }
 
 .step-2 .sede-direccion,
 .step-2 .sede-horario {
-    width: 100%;
-    font-family: var(--font-family-1);
-    color: #A5A5A5;
-    text-align: left;
-    letter-spacing: 0px;
+	width: 100%;
+	font-family: var(--font-family-1);
+	color: #a5a5a5;
+	text-align: left;
+	letter-spacing: 0px;
 }
 
 .step-2 .sede-title,
 .step-2 .sede-direccion,
 .step-2 .sede-horario {
-    margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 @media screen and (max-width: 992px) {
-    .step-2 .cstm-container .section-left {
-        padding: 5rem 6rem 0rem;
-        margin: 0 auto;
-    }
+	.step-2 .cstm-container .section-left {
+		padding: 5rem 6rem 0rem;
+		margin: 0 auto;
+	}
 
-    .step-2 .section-right .photo {
-        width: 30rem;
-        height: 25rem;
-    }
+	.step-2 .section-right .photo {
+		width: 30rem;
+		height: 25rem;
+	}
 }

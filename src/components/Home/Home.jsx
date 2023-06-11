@@ -1,39 +1,57 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar.jsx';
 
-import { photo2 } from "../../assets/img/img";
-import './Home.css'
+import { photo2 } from '../../assets/img/img';
+import './Home.css';
 
 export default () => {
-    const navigate = useNavigate();
-    const Step1 = data => {
-        navigate("../s1");
-    };
-    return (
-        <section className="step-0">
-            <Navbar NavStyle="1" />
-            <div className="cstm-container">
-                <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 section-left">
-                        <p className="label-form">Solicita tu turno virtual</p>
-                        <span className="sublabel-form">y realiza todos tus tramites sin filas.</span>
+	const navigate = useNavigate();
 
-                        <p className="subtitle-process"> Como solicitar tu turno</p>
+	const Step1 = () => {
+		navigate('../s1');
+	};
 
-                        <ol>
-                            <li className='item-list'>Selecciona la oficina mas cercana.</li>
-                            <li className='item-list'>Ingresa tus datos.</li>
-                            <li className='item-list'>Selecciona el servicio.</li>
-                            <li className='item-list'>Verifica tu informacion.</li>
-                        </ol>
-                        <button onClick={Step1} type='submit' className="btn cstm-btn">Solicitar Turno</button>
+	return (
+		<section className="step-0">
+			<Navbar NavStyle="1" />
+			<div className="cstm-container">
+				<div className="row">
+					<div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 section-left">
+						<p className="label-form">Solicita tu turno virtual</p>
+						<span className="sublabel-form">
+							y realiza todos tus tramites sin filas.
+						</span>
 
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 section-right">
-                        <img src={photo2} alt="photo" className="photo" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
+						<p className="subtitle-process">
+							{' '}
+							Como solicitar tu turno
+						</p>
+
+						<ol>
+							<li className="item-list">
+								Selecciona la oficina mas cercana.
+							</li>
+							<li className="item-list">Ingresa tus datos.</li>
+							<li className="item-list">
+								Selecciona el servicio.
+							</li>
+							<li className="item-list">
+								Verifica tu informacion.
+							</li>
+						</ol>
+						<button
+							onClick={Step1}
+							type="submit"
+							className="btn cstm-btn"
+						>
+							Solicitar Turno
+						</button>
+					</div>
+					<div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 section-right">
+						<img src={photo2} alt="photo" className="photo" />;
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
