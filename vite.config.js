@@ -5,9 +5,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	jsxInject: `import React from 'react'`,
 	plugins: [react()],
-	build: {
-		rollupOptions: {
-			external: ["react", "react-dom"],
-		},
-	},
 });
