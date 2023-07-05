@@ -1,2 +1,3 @@
 [build]
   command = "npm install --legacy-peer-deps --force && npm run build"
+  rollupOptions.external = ["react-dom/client"]
