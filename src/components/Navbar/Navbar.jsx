@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
-import { logo, back, netux } from '../../assets/img/img.jsx';
+import { logo, back, netux } from "../../assets/img/img.jsx";
 
 export default function Navbar(props) {
 	const location = useLocation();
 
-	return props.NavStyle === '1' ? (
+	return props.NavStyle === "1" ? (
 		<nav className="custom-navbar">
 			<div className="container-logo">
 				<img className="logo" src={logo} alt="Cruz verde Logo" />
@@ -33,9 +33,9 @@ export default function Navbar(props) {
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li
 								className={
-									location.pathname === '/s1'
-										? 'nav-item active'
-										: 'nav-item'
+									location.pathname === "/s1"
+										? "nav-item active"
+										: "nav-item"
 								}
 							>
 								<Link className="nav-link" to="/s1">
@@ -44,9 +44,9 @@ export default function Navbar(props) {
 							</li>
 							<li
 								className={
-									location.pathname === '/s2'
-										? 'nav-item active'
-										: 'nav-item'
+									location.pathname === "/s2"
+										? "nav-item active"
+										: "nav-item"
 								}
 							>
 								<Link className="nav-link" to="/s2">
@@ -55,24 +55,13 @@ export default function Navbar(props) {
 							</li>
 							<li
 								className={
-									location.pathname === '/s3'
-										? 'nav-item active'
-										: 'nav-item'
+									location.pathname === "/s3"
+										? "nav-item active"
+										: "nav-item"
 								}
 							>
 								<Link className="nav-link" to="/s3">
 									3
-								</Link>
-							</li>
-							<li
-								className={
-									location.pathname === '/s4'
-										? 'nav-item active'
-										: 'nav-item'
-								}
-							>
-								<Link className="nav-link" to="/s4">
-									4
 								</Link>
 							</li>
 						</ul>
