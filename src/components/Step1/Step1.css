@@ -1,17 +1,12 @@
 .step-1 .cstm-container {
-	background: url('../../assets/img/Mapa--blanco-1.png');
-	background-size: cover;
-}
-
-.step-1 .cstm-container .row {
-	height: 100vh !important;
-}
-
-.step-1 .cstm-container .section-left {
-	padding-top: 3rem;
-	padding-left: 4rem;
-	box-shadow: 0px 3px 6px #00000029;
+	padding: 3rem;
 	background: #fff;
+}
+
+.card {
+	width: 90%;
+	margin: 0 auto;
+	padding: 3rem;
 }
 
 .step-1 .label-form {
