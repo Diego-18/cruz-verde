@@ -12,7 +12,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			"react-dom": "@hot-loader/react-dom",
+			"react-dom": "react-dom",
 		},
 	},
 });
