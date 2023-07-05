@@ -10,9 +10,4 @@ export default defineConfig({
 			external: ["react", "react-dom"],
 		},
 	},
-	resolve: {
-		alias: {
-			"react-dom": "@hot-loader/react-dom",
-		},
-	},
 });
